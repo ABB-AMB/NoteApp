@@ -1,0 +1,3 @@
+to generate any file use the next command on the terminal
+
+flutter packages pub run build_runner build
