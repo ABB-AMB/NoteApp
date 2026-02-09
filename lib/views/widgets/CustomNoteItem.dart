@@ -13,7 +13,7 @@ class NoteItem extends StatelessWidget {
       onTap: () {
         Navigator.of(
           context,
-        ).push(MaterialPageRoute(builder: (context) => EditNoteView()));
+        ).push(MaterialPageRoute(builder: (context) => EditNoteView(note: note,)));
       },
       child: Container(
         padding: EdgeInsets.only(top: 24, bottom: 24, left: 24),
