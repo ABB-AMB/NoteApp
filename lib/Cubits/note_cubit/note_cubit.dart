@@ -11,13 +11,10 @@ class NoteCubit extends Cubit<NoteState> {
 
   List<NoteModel>? notesList;
   getNotes() {
-    try {
       var noteBox = Hive.box<NoteModel>(kNotesBox);
       notesList = noteBox.values.toList();
       emit(NoteSuccess());
-    } catch (e) {
-      print("error ${e.toString()}"); // TODO
-    }
+   
     // emit(NoteSuccess());
   }
 }
