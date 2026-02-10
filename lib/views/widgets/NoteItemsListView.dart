@@ -1,8 +1,8 @@
+import 'package:MyNotes/Cubits/note_cubit/note_cubit.dart';
+import 'package:MyNotes/models/NoteModel.dart';
+import 'package:MyNotes/views/widgets/CustomNoteItem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/Cubits/note_cubit/note_cubit.dart';
-import 'package:notes_app/models/NoteModel.dart';
-import 'package:notes_app/views/widgets/CustomNoteItem.dart';
 
 class NotesListView extends StatelessWidget {
   const NotesListView({super.key});

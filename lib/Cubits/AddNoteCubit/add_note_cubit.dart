@@ -1,15 +1,16 @@
 import 'dart:ui';
 
-import 'package:bloc/bloc.dart';
+import 'package:MyNotes/Constants.dart';
+import 'package:MyNotes/models/NoteModel.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_ce_flutter/hive_ce_flutter.dart';
-import 'package:meta/meta.dart';
-import 'package:notes_app/Constants.dart';
-import 'package:notes_app/models/NoteModel.dart';
 
-part 'add_note_cubit_state.dart';
 
-class AddNoteCubitCubit extends Cubit<AddNoteCubitState> {
-  AddNoteCubitCubit() : super(AddNoteCubitInitial());
+part 'add_note_state.dart';
+
+class AddNoteCubit extends Cubit<AddNoteCubitState> {
+  AddNoteCubit() : super(AddNoteCubitInitial());
   Color color = Color(0xffef767a);
   add(NoteModel note) async {
     emit(AddNoteCubitLoadding());

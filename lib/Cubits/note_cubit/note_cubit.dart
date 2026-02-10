@@ -1,8 +1,10 @@
-import 'package:bloc/bloc.dart';
-import 'package:hive_ce_flutter/hive_ce_flutter.dart';
-import 'package:meta/meta.dart';
-import 'package:notes_app/Constants.dart';
-import 'package:notes_app/models/NoteModel.dart';
+
+
+import 'package:MyNotes/Constants.dart';
+import 'package:MyNotes/models/NoteModel.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_ce/hive.dart';
 
 part 'note_state.dart';
 

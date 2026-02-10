@@ -1,11 +1,11 @@
+import 'package:MyNotes/Cubits/AddNoteCubit/add_note_cubit.dart';
+import 'package:MyNotes/models/NoteModel.dart';
+import 'package:MyNotes/views/widgets/ColorsListView.dart';
+import 'package:MyNotes/views/widgets/CustomBotton.dart';
+import 'package:MyNotes/views/widgets/CustomTextField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:notes_app/Cubits/AddNoteCubit/add_note_cubit_cubit.dart';
-import 'package:notes_app/models/NoteModel.dart';
-import 'package:notes_app/views/widgets/ColorsListView.dart';
-import 'package:notes_app/views/widgets/CustomBotton.dart';
-import 'package:notes_app/views/widgets/CustomTextField.dart';
 
 class NoteForm extends StatefulWidget {
   NoteForm({super.key});
@@ -42,7 +42,7 @@ class _NoteFormState extends State<NoteForm> {
           SizedBox(height: 32),
           ColorsListView(),
           SizedBox(height: 32),
-          BlocBuilder<AddNoteCubitCubit, AddNoteCubitState>(
+          BlocBuilder<AddNoteCubit, AddNoteCubitState>(
             builder:
                 (context, state) => CustomBotton(
                   isLoading: state is AddNoteCubitLoadding ? true : false,
@@ -68,7 +68,7 @@ class _NoteFormState extends State<NoteForm> {
         date: formattedDate,
         color: Colors.blueAccent.value,
       );
-      BlocProvider.of<AddNoteCubitCubit>(context).add(note);
+      BlocProvider.of<AddNoteCubit>(context).add(note);
     } else {
       autovalidateMode = AutovalidateMode.always;
       setState(() {});

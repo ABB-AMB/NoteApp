@@ -1,9 +1,9 @@
+import 'package:MyNotes/Cubits/AddNoteCubit/add_note_cubit.dart';
+import 'package:MyNotes/Cubits/note_cubit/note_cubit.dart';
+import 'package:MyNotes/views/widgets/NoteForm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:notes_app/Cubits/AddNoteCubit/add_note_cubit_cubit.dart';
-import 'package:notes_app/Cubits/note_cubit/note_cubit.dart';
-import 'package:notes_app/views/widgets/NoteForm.dart';
+
 
 class AddNoteBottomSheet extends StatelessWidget {
   const AddNoteBottomSheet({super.key});
@@ -11,10 +11,10 @@ class AddNoteBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AddNoteCubitCubit(),
+      create: (context) => AddNoteCubit(),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: BlocConsumer<AddNoteCubitCubit, AddNoteCubitState>(
+        child: BlocConsumer<AddNoteCubit, AddNoteCubitState>(
           listener: (context, state) {
             if (state is AddNoteCubitSuccess) {
               BlocProvider.of<NoteCubit>(context).getNotes();

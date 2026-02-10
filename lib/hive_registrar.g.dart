@@ -2,8 +2,8 @@
 // Do not modify
 // Check in to version control
 
+import 'package:MyNotes/models/NoteModel.dart';
 import 'package:hive_ce/hive.dart';
-import 'package:notes_app/models/NoteModel.dart';
 
 extension HiveRegistrar on HiveInterface {
   void registerAdapters() {

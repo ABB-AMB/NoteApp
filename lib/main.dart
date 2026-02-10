@@ -1,12 +1,12 @@
+import 'package:MyNotes/Constants.dart';
+import 'package:MyNotes/Cubits/note_cubit/note_cubit.dart';
+import 'package:MyNotes/SimpleBlocObserver.dart';
+import 'package:MyNotes/models/NoteModel.dart';
+import 'package:MyNotes/views/NotesView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_ce_flutter/hive_ce_flutter.dart';
-import 'package:notes_app/Constants.dart';
-import 'package:notes_app/Cubits/AddNoteCubit/add_note_cubit_cubit.dart';
-import 'package:notes_app/Cubits/note_cubit/note_cubit.dart';
-import 'package:notes_app/SimpleBlocObserver.dart';
-import 'package:notes_app/models/NoteModel.dart';
-import 'package:notes_app/views/NotesView.dart';
+
 
 void main() async {
   // app is done

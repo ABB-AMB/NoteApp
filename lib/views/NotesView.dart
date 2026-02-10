@@ -1,10 +1,11 @@
+
+import 'package:MyNotes/Constants.dart';
+import 'package:MyNotes/Cubits/note_cubit/note_cubit.dart';
+import 'package:MyNotes/views/widgets/AddNoteBottomSheet.dart';
+import 'package:MyNotes/views/widgets/CustomAppBar.dart';
+import 'package:MyNotes/views/widgets/NoteItemsListView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/Constants.dart';
-import 'package:notes_app/Cubits/note_cubit/note_cubit.dart';
-import 'package:notes_app/views/widgets/AddNoteBottomSheet.dart';
-import 'package:notes_app/views/widgets/CustomAppBar.dart';
-import 'package:notes_app/views/widgets/NoteItemsListView.dart';
 
 class NotesView extends StatefulWidget {
   const NotesView({super.key});
